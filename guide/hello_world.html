@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Vue.js HelloWorld!</title>
@@ -8,6 +8,35 @@
 <body>
 <div id="app">
     {{ message }}
+</div>
+<div id="app-2">
+      <span v-bind:title="message">
+          Hover your mouse over me for a few seconds to see my dynamically bound title!
+      </span>
+</div>
+<div id="app-3">
+    <p v-if="seen">Now you see me</p>
+</div>
+<div id="app-4">
+    <ol>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ol>
+</div>
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+<div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+</div>
+<div id="app-7">
+    <ol>
+        <!-- todoオブジェクトによって各todo-itemを提供する。それは内容を動的にできるように表す -->
+        <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+    </ol>
 </div>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="./js/app.js"></script>
