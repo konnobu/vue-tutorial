@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js HelloWorld!</title>
+    <link rel="stylesheet" href="./styles/app.css">
+</head>
+<body>
+
+<div id="watch-example">
+    <p>
+        はい/いいえ の質問:
+        <input v-model="question">
+    </p>
+    <p>{{ answer }}</p>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
+<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+<script src="./js/watch.js"></script>
+</body>
+</html>
